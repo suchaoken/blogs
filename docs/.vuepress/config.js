@@ -1,6 +1,6 @@
 const moment =require('moment')
 module.exports = {
-  base:'/blogs/',
+  // base:'/',
   title:'苏钞垦的blogs',
   description:'苏钞垦的博客',
   head:[
