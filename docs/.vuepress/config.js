@@ -1,4 +1,6 @@
+const moment =require('moment')
 module.exports = {
+  base:'/blogs/',
   title:'苏钞垦的blogs',
   description:'苏钞垦的博客',
   head:[
@@ -24,5 +26,17 @@ module.exports = {
             ]
           
       },
+      plugins: [
+        [
+          '@vuepress/last-updated',
+          {
+            transformer: (timestamp, lang) => {
+              // 不要忘了安装 moment
+              moment.locale(lang)
+              return moment(timestamp).format('LLLL')
+            }
+          }
+        ]
+      ]
        
   }
